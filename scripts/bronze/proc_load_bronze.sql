@@ -1,4 +1,42 @@
---EXEC bronze.load_bronze
+/*
+===============================================================================
+Stored Procedure: Load Bronze Layer (Source -> Bronze)
+===============================================================================
+
+📌 Description:
+This stored procedure loads raw data into the 'bronze' schema from external CSV files.
+The bronze layer represents the initial stage of data ingestion in the data warehouse.
+
+⚙️ Functionality:
+- Truncates existing bronze tables before loading new data
+- Uses BULK INSERT to load data from CSV files into bronze tables
+- Ensures fresh and consistent raw data loading
+
+🎯 Purpose:
+To automate the ingestion of raw data from source files into the bronze layer,
+providing a clean starting point for further transformations (Silver & Gold layers).
+
+🗂️ Layer Information:
+- Bronze Layer → Raw / Unprocessed Data
+- Source → External CSV Files
+
+⚠️ Parameters:
+- None (This procedure does not accept any input parameters)
+
+📥 Output:
+- No return value (data is directly loaded into tables)
+
+▶️ Usage:
+EXEC bronze.load_bronze;
+
+👨‍💻 Author: Dev Chauhan
+📅 Last Updated: 2026
+
+===============================================================================
+*/
+
+
+
 
 CREATE OR ALTER PROCEDURE bronze.load_bronze AS
 BEGIN
