@@ -26,17 +26,10 @@ for fresh raw data ingestion from source systems.
 ===============================================================================
 */
 
-
-
-
-
-
-
-
 IF OBJECT_ID ('bronze.crm_cust_info', 'U') IS NOT NULL
     DROP TABLE bronze.crm_cust_info;
 CREATE TABLE bronze.crm_cust_info (
-    cst_id INT PRIMARY KEY,
+    cst_id INT ,
     cst_key NVARCHAR(50),
     cst_firstname NVARCHAR(50),
     cst_lastname NVARCHAR(50),
@@ -48,7 +41,7 @@ CREATE TABLE bronze.crm_cust_info (
 IF OBJECT_ID ('bronze.crm_prd_info', 'U') IS NOT NULL
     DROP TABLE bronze.crm_prd_info;
 CREATE TABLE bronze.crm_prd_info (
-    prd_id INT PRIMARY KEY,
+    prd_id INT ,
     prd_key NVARCHAR(50) NOT NULL,
     prd_nm NVARCHAR(100) NOT NULL,
     prd_cost DECIMAL(10,2),
@@ -61,40 +54,46 @@ CREATE TABLE bronze.crm_prd_info (
 IF OBJECT_ID ('bronze.crm_sales_details', 'U') IS NOT NULL
     DROP TABLE bronze.crm_sales_details;
 CREATE TABLE bronze.crm_sales_details (
-    sls_ord_num NVARCHAR(50) PRIMARY KEY,
+    sls_ord_num NVARCHAR(50),
     sls_prd_key NVARCHAR(50) NOT NULL,
     sls_cust_id INT NOT NULL,
-    sls_order_dt DATE,
-    sls_ship_dt DATE,
-    sls_due_dt DATE,
+    sls_order_dt NVARCHAR(50),
+    sls_ship_dt NVARCHAR(50),
+    sls_due_dt NVARCHAR(50),
     sls_sales DECIMAL(10,2),
     sls_quantity INT,
     sls_price DECIMAL(10,2)
 );
 
 
-
 IF OBJECT_ID ('bronze.erp_loc_a101', 'U') IS NOT NULL
     DROP TABLE bronze.erp_loc_a101;
 CREATE TABLE bronze.erp_loc_a101 (
-    cid INT PRIMARY KEY,
-    bdate DATE,
-    gen NVARCHAR(10)
+    cid NVARCHAR(50),
+    cntry NVARCHAR(50)
 )
 
 IF OBJECT_ID ('bronze.erp_cust_az12', 'U') IS NOT NULL
     DROP TABLE bronze.erp_cust_az12;
 CREATE TABLE bronze.erp_cust_az12 (
-    cid INT,
-    cntry NVARCHAR(50)
+    cid NVARCHAR(50) ,
+    bdate NVARCHAR(50),
+    gen NVARCHAR(50)
 )
 
 IF OBJECT_ID ('bronze.erp_px_cat_g1v2', 'U') IS NOT NULL
     DROP TABLE bronze.erp_px_cat_g1v2;
 CREATE TABLE bronze.erp_px_cat_g1v2 (
-    id INT PRIMARY KEY,
+    id NVARCHAR(50) ,
     cat NVARCHAR(50),
     subcat NVARCHAR(50),
     maintenance NVARCHAR(50)
 )
+
+
+
+
+
+
+
 
