@@ -1,7 +1,7 @@
 # 🚀 Data Warehouse & Analytics Project
 
 👨‍💻 **Author:** Dev Chauhan  
-🎓 B.Tech CSE (Data Science) | Aspiring Data Analyst | AI Engineer  
+🎓 B.Tech CSE (Data Science) | Aspiring Data Analyst | AI Engineer   
    
 --- 
   
