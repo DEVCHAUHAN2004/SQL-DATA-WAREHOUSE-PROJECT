@@ -5,7 +5,7 @@
     
 ---  
   
-## 📌 Project Overview  
+## 📌 Project Overview   
  
 Welcome to the **Data Warehouse & Analytics Project** repository 🚀  
 
