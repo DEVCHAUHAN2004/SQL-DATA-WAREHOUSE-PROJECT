@@ -6,7 +6,7 @@
 ---  
   
 ## 📌 Project Overview  
-
+ 
 Welcome to the **Data Warehouse & Analytics Project** repository 🚀  
 
 This project demonstrates a **complete end-to-end data warehousing solution** — from raw data ingestion to generating actionable business insights.
